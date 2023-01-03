@@ -1,0 +1,8 @@
+/// Criar turma:
+POST http://localhost:3003/turma
+Content-Type: application/json
+
+{
+    "nome": "Lamarr",
+    "modulo": 5
+}
