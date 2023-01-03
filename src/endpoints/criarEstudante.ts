@@ -6,18 +6,31 @@ export default async function criarEstudante(
     res: Response
 ){
     try{
-        const {nome, email, data_nasc, turma_id} = req.body
+        const {nome, email, data_nasc} = req.body
+        const turma = req.body.turma_id
 
-        if(!nome && !email && !data_nasc && !turma_id){
-            return res.status(422).send("Insira todos os parâmetros necessários: Nome, email, data de nascimento e turma.")
+        if(!nome || !email || !data_nasc || !turma){
+            throw new Error ("Insira todos os parâmetros necessários: Nome, email, data de nascimento e turma.")
         }
+
+        let resultadoTurma = await connection.raw( 
+            `SELECT Nome FROM Turma where id=${turma}`
+        )
+
+        console.log(resultadoTurma[0])
+        
+        if(resultadoTurma){
+            throw new Error ("Turma não encontrada")
+
+        }
+
         await connection.insert(
             [{
                 id: Math.random(),
                 nome: nome,
                 email: email,
                 data_nasc: data_nasc,
-                turma_id: turma_id
+                turma_id: turma
             }]
         ).into("Estudante")
 
