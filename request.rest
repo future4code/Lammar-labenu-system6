@@ -3,9 +3,12 @@ POST http://localhost:3003/turma
 Content-Type: application/json
 
 {
-    "nome": "Banco de Dados",
-    "modulo": 0
+    "nome": "Java",
+    "modulo": 1
 }
+
+### // LISTAR TURMAS:
+GET http://localhost:3003/turma
 
 ### // Criar estudante:
 POST http://localhost:3003/estudante

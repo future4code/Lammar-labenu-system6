@@ -4,6 +4,7 @@ import { AddressInfo } from "net"
 import criarTurma from "./endpoints/Turmas/criarTurma"
 import criarEstudante from "./endpoints/Estudantes/criarEstudante"
 import criarDocente from "./endpoints/Docentes/criarDocente"
+import listarTurmas from "./endpoints/Turmas/listarTurmas"
 
 const app = express()
 
@@ -12,6 +13,10 @@ app.use(cors())
 
 // Criar turma:
 app.post("/turma", criarTurma)
+
+// Procurar turmas ativas:
+app.get("/turma", listarTurmas)
+
 
 // Criar estudante:
 app.post("/estudante", criarEstudante)
