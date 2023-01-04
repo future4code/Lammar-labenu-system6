@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { connection } from "../data/connection";
 
-export default async function criarEstudante(
+export default async function criarDocente(
     req: Request,
     res: Response
 ){
@@ -16,12 +16,11 @@ export default async function criarEstudante(
         let resultadoTurma = await connection.raw( 
             `SELECT Nome FROM Turma where id=${turma}`
         )
-        
-        let tamanhoResultado = resultadoTurma[0].length      
 
-        if(tamanhoResultado < 1){
-            return res.status(422).send("Turma não encontrada")
-            console.log("Turma não encontrada")
+        console.log(resultadoTurma[0])
+        
+        if(!resultadoTurma){
+            throw new Error ("Turma não encontrada")
         }
 
         await connection.insert(
@@ -32,10 +31,10 @@ export default async function criarEstudante(
                 data_nasc: data_nasc,
                 turma_id: turma
             }]
-        ).into("Estudante")
+        ).into("Docente")
 
-        res.status(201).send("Estudante criado com sucesso!")
-        console.log("Estudante criada com sucesso!")
+        res.status(201).send("Docente criado com sucesso!")
+        console.log("Docente criada com sucesso!")
     }catch(error:any){
         console.log(error)
     }
