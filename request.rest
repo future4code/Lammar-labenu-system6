@@ -33,6 +33,14 @@ Content-Type: application/json
 ### // Listar estudantes pelo nome:
 GET http://localhost:3003/estudante/"Bruna de Carvalho"
 
+### // ALTERAR TURMA DE UM ESTUDANTE:
+PUT http://localhost:3003/estudante/0.10920547414037207
+Content-Type: application/json
+
+{
+    "turma_id": "0.6075049461144448"
+}
+
 ### // Criar docente:
 POST http://localhost:3003/docente
 Content-Type: application/json
