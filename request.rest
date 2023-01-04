@@ -23,8 +23,8 @@ POST http://localhost:3003/docente
 Content-Type: application/json
 
 {
-    "nome": "Silvia",
-    "email": "silvia@professora.com.br",
-    "data_nasc": "1985-04-20",
-    "turma_id": "0.6075049461144448"
+    "nome": "Marcos",
+    "email": "marcos@professor.com.br",
+    "data_nasc": "1987-05-26",
+    "turma_id": "0.23113908740604372"
 }

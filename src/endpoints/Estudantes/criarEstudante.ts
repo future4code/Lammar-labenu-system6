@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { connection } from "../data/connection";
+import { connection } from "../../data/connection";
 
-export default async function criarDocente(
+export default async function criarEstudante(
     req: Request,
     res: Response
 ){
@@ -31,10 +31,10 @@ export default async function criarDocente(
                 data_nasc: data_nasc,
                 turma_id: turma
             }]
-        ).into("Docente")
+        ).into("Estudante")
 
-        res.status(201).send("Docente criado com sucesso!")
-        console.log("Docente criada com sucesso!")
+        res.status(201).send("Estudante criado com sucesso!")
+        console.log("Estudante criada com sucesso!")
     }catch(error:any){
         console.log(error)
     }

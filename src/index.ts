@@ -1,9 +1,9 @@
 import express from "express"
 import cors from 'cors'
 import { AddressInfo } from "net"
-import criarTurma from "./endpoints/criarTurma"
-import criarEstudante from "./endpoints/criarEstudante"
-import criarDocente from "./endpoints/criarDocente"
+import criarTurma from "./endpoints/Turmas/criarTurma"
+import criarEstudante from "./endpoints/Estudantes/criarEstudante"
+import criarDocente from "./endpoints/Docentes/criarDocente"
 
 const app = express()
 
