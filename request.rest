@@ -11,6 +11,14 @@ Content-Type: application/json
 GET http://localhost:3003/turma
 
 
+### // ALTERAR MÓDULO:
+PUT http://localhost:3003/turma/0.23113908740604372
+Content-Type: application/json
+
+{
+    "modulo": 4
+}
+
 ### // Criar estudante:
 POST http://localhost:3003/estudante
 Content-Type: application/json
