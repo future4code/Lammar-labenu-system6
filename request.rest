@@ -12,10 +12,10 @@ POST http://localhost:3003/estudante
 Content-Type: application/json
 
 {
-    "nome": "Joana",
-    "email": "joana@gmail.com.br",
-    "data_nasc": "1995-02-16",
-    "turma_id": "2"
+    "nome": "Vini Junior",
+    "email": "malvadeza@gmail.com.br",
+    "data_nasc": "1991-03-15",
+    "turma_id": "0.23113908740604372"
 }
 
 ### // Criar docente:

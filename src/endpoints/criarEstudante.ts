@@ -21,7 +21,6 @@ export default async function criarEstudante(
 
         if(tamanhoResultado < 1){
             return res.status(422).send("Turma não encontrada")
-            console.log("Turma não encontrada")
         }
 
         await connection.insert(
