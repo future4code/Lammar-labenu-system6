@@ -16,11 +16,11 @@ export default async function criarDocente(
         let resultadoTurma = await connection.raw( 
             `SELECT Nome FROM Turma where id=${turma}`
         )
-
-        console.log(resultadoTurma[0])
         
-        if(!resultadoTurma){
-            throw new Error ("Turma não encontrada")
+        let tamanhoResultado = resultadoTurma[0].length      
+
+        if(tamanhoResultado < 1){
+            return res.status(422).send("Turma não encontrada")
         }
 
         await connection.insert(
