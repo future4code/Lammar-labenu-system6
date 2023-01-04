@@ -6,6 +6,7 @@ import criarEstudante from "./endpoints/Estudantes/criarEstudante"
 import criarDocente from "./endpoints/Docentes/criarDocente"
 import listarTurmas from "./endpoints/Turmas/listarTurmas"
 import listarEstudante from "./endpoints/Estudantes/listarEstudantes"
+import listarDocentes from "./endpoints/Docentes/listarDocentes"
 
 const app = express()
 
@@ -27,6 +28,9 @@ app.get("/estudante/:nome", listarEstudante)
 
 // Criar docente:
 app.post("/docente", criarDocente)
+
+//Procurar docente
+app.get("/docente", listarDocentes)
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if(server){
