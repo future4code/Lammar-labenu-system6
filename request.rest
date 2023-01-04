@@ -3,12 +3,13 @@ POST http://localhost:3003/turma
 Content-Type: application/json
 
 {
-    "nome": "Java",
-    "modulo": 1
+    "nome": "Phyton",
+    "modulo": 0
 }
 
 ### // LISTAR TURMAS:
 GET http://localhost:3003/turma
+
 
 ### // Criar estudante:
 POST http://localhost:3003/estudante
@@ -20,6 +21,9 @@ Content-Type: application/json
     "data_nasc": "1991-03-15",
     "turma_id": "0.23113908740604372"
 }
+
+### // Listar estudantes pelo nome:
+GET http://localhost:3003/estudante/"Bruna de Carvalho"
 
 ### // Criar docente:
 POST http://localhost:3003/docente

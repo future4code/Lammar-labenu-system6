@@ -5,6 +5,7 @@ import criarTurma from "./endpoints/Turmas/criarTurma"
 import criarEstudante from "./endpoints/Estudantes/criarEstudante"
 import criarDocente from "./endpoints/Docentes/criarDocente"
 import listarTurmas from "./endpoints/Turmas/listarTurmas"
+import listarEstudante from "./endpoints/Estudantes/listarEstudantes"
 
 const app = express()
 
@@ -20,6 +21,9 @@ app.get("/turma", listarTurmas)
 
 // Criar estudante:
 app.post("/estudante", criarEstudante)
+
+//Procurar estudante
+app.get("/estudante/:nome", listarEstudante)
 
 // Criar docente:
 app.post("/docente", criarDocente)
