@@ -9,11 +9,15 @@ import listarEstudante from "./endpoints/Estudantes/listarEstudantes"
 import listarDocentes from "./endpoints/Docentes/listarDocentes"
 import alterarModulo from "./endpoints/Turmas/alterarModulo"
 import alterarTurmaEstudante from "./endpoints/Estudantes/alterarTurmaEstudante"
+import alterarTurmaDocente from "./endpoints/Docentes/alterarTurmaDocente"
 
 const app = express()
 
 app.use(express.json())
 app.use(cors())
+
+
+// ---------------> TURMA <--------------------
 
 // Criar turma:
 app.post("/turma", criarTurma)
@@ -24,6 +28,9 @@ app.get("/turma", listarTurmas)
 // Alterar módulo de uma determinada turma:
 app.put("/turma/:id", alterarModulo)
 
+
+// ---------------> ESTUDANTE <--------------------
+
 // Criar estudante:
 app.post("/estudante", criarEstudante)
 
@@ -33,11 +40,19 @@ app.get("/estudante/:nome", listarEstudante)
 // Alterar turma de uma determinado estudante:
 app.put("/estudante/:id", alterarTurmaEstudante)
 
+
+// ---------------> DOCENTE <--------------------
 // Criar docente:
 app.post("/docente", criarDocente)
 
 //Procurar docente
 app.get("/docente", listarDocentes)
+
+// Alterar turma de um determinado docente:
+app.put("/docente/:id", alterarTurmaDocente)
+
+
+
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if(server){
