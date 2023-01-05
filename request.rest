@@ -43,6 +43,19 @@ Content-Type: application/json
     "turma_id": "0.23113908740604372"
 }
 
+
+### /// INSERIR HOBBY:
+POST http://localhost:3003/hobby
+Content-Type: application/json
+
+{
+    "estudante_id":"0.20106397913381868",
+    "hobby_id":"2"
+}
+
+
+
+
 ### // CRIAR DOCENTE:
 POST http://localhost:3003/docente
 Content-Type: application/json
@@ -56,3 +69,13 @@ Content-Type: application/json
 
 ### // FILTRAR LISTA DE DOCENTES:
 GET http://localhost:3003/docente
+
+### // ALTERAR TURMA DE UM DOCENTE:
+PUT http://localhost:3003/docente/0.910779734382184
+Content-Type: application/json
+
+{
+    "turma_id":"0.23113908740604372"
+}
+
+

@@ -23,7 +23,7 @@ export default async function alterarTurmaDocente(req:Request, res:Response) {
             return res.status(422).send("Docente não encontrado")
         }
 
-
+        
         let procurandoTurma = await connection.raw( 
             `SELECT Nome FROM Turma where id=${turma_id}`
         )

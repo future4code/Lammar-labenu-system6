@@ -10,6 +10,7 @@ import listarDocentes from "./endpoints/Docentes/listarDocentes"
 import alterarModulo from "./endpoints/Turmas/alterarModulo"
 import alterarTurmaEstudante from "./endpoints/Estudantes/alterarTurmaEstudante"
 import alterarTurmaDocente from "./endpoints/Docentes/alterarTurmaDocente"
+import hobbyEstudante from "./endpoints/Estudantes/hobbyEstudante"
 
 const app = express()
 
@@ -39,6 +40,10 @@ app.get("/estudante/:nome", listarEstudante)
 
 // Alterar turma de uma determinado estudante:
 app.put("/estudante/:id", alterarTurmaEstudante)
+
+// INSERIR HOBBY
+// Alterar turma de uma determinado estudante:
+app.post("/hobby", hobbyEstudante)
 
 
 // ---------------> DOCENTE <--------------------
