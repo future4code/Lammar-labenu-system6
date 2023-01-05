@@ -11,6 +11,7 @@ import alterarModulo from "./endpoints/Turmas/alterarModulo"
 import alterarTurmaEstudante from "./endpoints/Estudantes/alterarTurmaEstudante"
 import alterarTurmaDocente from "./endpoints/Docentes/alterarTurmaDocente"
 import hobbyEstudante from "./endpoints/Estudantes/hobbyEstudante"
+import especialidadeDocente from "./endpoints/Docentes/especialidade"
 
 const app = express()
 
@@ -42,7 +43,7 @@ app.get("/estudante/:nome", listarEstudante)
 app.put("/estudante/:id", alterarTurmaEstudante)
 
 // INSERIR HOBBY
-// Alterar turma de uma determinado estudante:
+// Inserir o hobby de um determinado estudante:
 app.post("/hobby", hobbyEstudante)
 
 
@@ -55,6 +56,10 @@ app.get("/docente", listarDocentes)
 
 // Alterar turma de um determinado docente:
 app.put("/docente/:id", alterarTurmaDocente)
+
+// INSERIR ESPECIALIDADE
+// Inserir a especialidade de um determinado docente:
+app.post("/especialidade", especialidadeDocente)
 
 
 

@@ -55,7 +55,6 @@ Content-Type: application/json
 
 
 
-
 ### // CRIAR DOCENTE:
 POST http://localhost:3003/docente
 Content-Type: application/json
@@ -76,6 +75,15 @@ Content-Type: application/json
 
 {
     "turma_id":"0.23113908740604372"
+}
+
+### /// INSERIR ESPECIALIDADE:
+POST http://localhost:3003/especialidade
+Content-Type: application/json
+
+{
+    "docente_id":"0.20106397913381868",
+    "especialidade_id":"2"
 }
 
 
