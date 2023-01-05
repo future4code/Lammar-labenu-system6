@@ -6,16 +6,16 @@ export default async function criarTurma(
     res: Response
 ){
     try{
-        const {nome, modulo} = req.body
+        const {nome} = req.body
 
-        if(!nome && !modulo){
+        if(!nome ){
             return res.status(422).send("Insira todos os parâmetros necessários: Nome e módulo")
         }
         await connection.insert(
             [{
                 id: Math.random(),
                 nome: nome,
-                modulo: modulo,
+                modulo: 0,
             }]
         ).into("Turma")
 

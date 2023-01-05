@@ -14,7 +14,7 @@ export default async function alterarModulo(req:Request, res:Response) {
         }else if (modulo > 6){
             res.status(404).send("Valor inválido, uma turma ativa só pode assumir um valor entre 1 a 6")
         }
-
+        
         let procurandoTurma = await connection.raw( 
             `SELECT Nome FROM Turma where id=${id}`
         )
