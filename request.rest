@@ -16,7 +16,7 @@ PUT http://localhost:3003/turma/0.23113908740604372
 Content-Type: application/json
 
 {
-    "modulo": 4
+    "modulo": 8
 }
 
 
@@ -82,7 +82,7 @@ POST http://localhost:3003/especialidade
 Content-Type: application/json
 
 {
-    "docente_id":"0.20106397913381868",
+    "docente_id":"0.6729265176353398",
     "especialidade_id":"2"
 }
 

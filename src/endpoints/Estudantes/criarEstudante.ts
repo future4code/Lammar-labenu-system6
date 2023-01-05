@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { Estudante } from "../../class/Estudante";
 import { connection } from "../../data/connection";
 
 export default async function criarEstudante(

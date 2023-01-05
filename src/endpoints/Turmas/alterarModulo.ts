@@ -11,6 +11,8 @@ export default async function alterarModulo(req:Request, res:Response) {
             res.status(422).send("Id da turma não encontrada")
         }else if(!modulo){
             res.status(422).send("O novo módulo não foi informado, atualização não realizada.")
+        }else if (modulo > 6){
+            res.status(404).send("Valor inválido, uma turma ativa só pode assumir um valor entre 1 a 6")
         }
 
         let procurandoTurma = await connection.raw( 
