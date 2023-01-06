@@ -4,10 +4,9 @@
   "description": "Você estuda na Labenu_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev ./src/index.ts",
     "start": "tsc && node ./build/index.js",
-    "migrations": "tsc && node ./build/data/migrations.js"
+    "migrations": "tsnd ./src/data/migrations.ts"
   },
   "repository": {
     "type": "git",

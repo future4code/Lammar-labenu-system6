@@ -1,0 +1,95 @@
+/// CRIAR TURMA:
+POST http://localhost:3003/turma
+Content-Type: application/json
+
+{
+    "nome": "Phyton"
+}
+
+### // LISTAR TURMAS:
+GET http://localhost:3003/turma
+
+
+### // ALTERAR MÓDULO DA TURMA:
+PUT http://localhost:3003/turma/0.9484926436624486
+Content-Type: application/json
+
+{
+    "modulo": 1
+}
+
+
+
+### // CRIAR ESTUDANTE:
+POST http://localhost:3003/estudante
+Content-Type: application/json
+
+{
+    "nome": "Ludmilla",
+    "email": "numanice@gmail.com.br",
+    "data_nasc": "1993-01-21",
+    "turma_id":"0.1729131910764119"
+}
+
+### /// INSERIR HOBBY:
+POST http://localhost:3003/hobby
+Content-Type: application/json
+
+{
+    "estudante_id":"0.10308674906529514",
+    "hobbies": [
+        {"Hobby": "Cantar"}
+    ]
+}
+
+### // FILTRAR ESTUDANTE PELO NOME COMPLETO:
+GET http://localhost:3003/estudante/"Anitta"
+
+### // ALTERAR TURMA DE UM DETERMINADO ESTUDANTE:
+PUT http://localhost:3003/estudante/0.8097187227816469
+Content-Type: application/json
+
+{
+    "turma_id": "0.9484926436624486"
+}
+
+
+
+
+
+### // CRIAR DOCENTE:
+POST http://localhost:3003/docente
+Content-Type: application/json
+
+{
+    "nome": "Hebe",
+    "email": "hebe@professor.com.br",
+    "data_nasc": "1957-02-10",
+    "turma_id": "0.27275071045677013"
+}
+
+### /// INSERIR ESPECIALIDADE:W
+POST http://localhost:3003/especialidade
+Content-Type: application/json
+
+{
+    "docente_id":"0.7788297860724316",
+    "especialidades": [
+        {"especialidade": "Phyton"}
+    ]
+}
+
+### // FILTRAR LISTA DE DOCENTES:
+GET http://localhost:3003/docente
+
+### // ALTERAR TURMA DE UM DOCENTE:
+PUT http://localhost:3003/docente/0.910779734382184
+Content-Type: application/json
+
+{
+    "turma_id":"0.23113908740604372"
+}
+
+
+
+
