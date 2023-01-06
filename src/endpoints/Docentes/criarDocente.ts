@@ -33,8 +33,7 @@ export default async function criarDocente(
             }]
         ).into("Docente")
 
-        res.status(201).send("Docente criado com sucesso!")
-        console.log("Docente criada com sucesso!")
+        res.status(201).send("Docente criado com sucesso! Próxima etapa: Inserir suas especialidades.")
     }catch(error:any){
         console.log(error)
     }

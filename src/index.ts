@@ -50,15 +50,17 @@ app.put("/estudante/:id", alterarTurmaEstudante)
 // Criar docente:
 app.post("/docente", criarDocente)
 
+// INSERIR ESPECIALIDADE
+// Inserir a especialidade de um determinado docente:
+app.post("/especialidade", especialidadeDocente)
+
 //Procurar docente
 app.get("/docente", listarDocentes)
 
 // Alterar turma de um determinado docente:
 app.put("/docente/:id", alterarTurmaDocente)
 
-// INSERIR ESPECIALIDADE
-// Inserir a especialidade de um determinado docente:
-app.post("/especialidade", especialidadeDocente)
+
 
 
 

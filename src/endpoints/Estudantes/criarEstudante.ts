@@ -34,8 +34,7 @@ export default async function criarEstudante(
             }]
         ).into("Estudante")
 
-        res.status(201).send("Estudante criado com sucesso!")
-        console.log("Estudante criada com sucesso!")
+        res.status(201).send("Estudante criado com sucesso! Próxima etapa: Inserir seus hobbys")
     }catch(error:any){
         console.log(error)
     }

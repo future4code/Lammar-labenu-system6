@@ -68,6 +68,17 @@ Content-Type: application/json
     "turma_id": "0.9484926436624486"
 }
 
+### /// INSERIR ESPECIALIDADE:W
+POST http://localhost:3003/especialidade
+Content-Type: application/json
+
+{
+    "docente_id":"0.7946255538959066",
+    "especialidades": [
+        {"especialidade": "JavaScript"}
+    ]
+}
+
 ### // FILTRAR LISTA DE DOCENTES:
 GET http://localhost:3003/docente
 
@@ -79,15 +90,6 @@ Content-Type: application/json
     "turma_id":"0.23113908740604372"
 }
 
-### /// INSERIR ESPECIALIDADE:W
-POST http://localhost:3003/especialidade
-Content-Type: application/json
 
-{
-    "docente_id":"0.7946255538959066",
-    "especialidades": [
-        {"especialidade": "JavaScript"}
-    ]
-}
 
 
