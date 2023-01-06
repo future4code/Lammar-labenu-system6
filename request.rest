@@ -38,7 +38,7 @@ Content-Type: application/json
 {
     "estudante_id":"0.7512528043773141",
     "hobbies": [
-        {"Hobby": "Desenhar"}
+        {"Hobby": "Correr"}
     ]
 }
 
@@ -62,10 +62,10 @@ POST http://localhost:3003/docente
 Content-Type: application/json
 
 {
-    "nome": "Marcos",
-    "email": "marcos@professor.com.br",
-    "data_nasc": "1987-05-26",
-    "turma_id": "0.23113908740604372"
+    "nome": "Joelma",
+    "email": "joelma@professor.com.br",
+    "data_nasc": "1997-04-11",
+    "turma_id": "0.9484926436624486"
 }
 
 ### // FILTRAR LISTA DE DOCENTES:
@@ -79,13 +79,15 @@ Content-Type: application/json
     "turma_id":"0.23113908740604372"
 }
 
-### /// INSERIR ESPECIALIDADE:
+### /// INSERIR ESPECIALIDADE:W
 POST http://localhost:3003/especialidade
 Content-Type: application/json
 
 {
-    "docente_id":"0.6729265176353398",
-    "especialidade_id":"2"
+    "docente_id":"0.7946255538959066",
+    "especialidades": [
+        {"especialidade": "JavaScript"}
+    ]
 }
 
 

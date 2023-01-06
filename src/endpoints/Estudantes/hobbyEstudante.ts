@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { request } from "http";
 import { connection } from "../../data/connection";
 
 export default async function hobbyEstudante(
