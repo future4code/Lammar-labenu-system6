@@ -43,7 +43,7 @@ Sistema básico para uma instituição de ensino.
 
 <ul>
     </p><li><strong>Criar docente</strong></li></p>
-    <p><li><strong>Inserir as especialidades </strong></li></p>
+    <p><li><strong>Inserir as especialidades: </strong></li> O docente pode inserir a quantidade de especialidades que desejar.</p>
     </p><li><strong>Lista com todos os docentes</strong></li></p>
     </p><li><strong>Alterar a turma.</strong></li>É necessário inserir o id do aluno e o id da turma.</p>
 </ul>
