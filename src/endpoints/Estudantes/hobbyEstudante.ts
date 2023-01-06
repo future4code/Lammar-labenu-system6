@@ -13,14 +13,14 @@ export default async function hobbyEstudante(
 
         for(let hobby of hobbies) {
             const procurarHobby = await connection.raw(
-                `SELECT id FROM Hobby WHERE nome = "${hobby.nome}"`
+                `SELECT id FROM Hobby WHERE Hobby = "${hobby.Hobby}"`
             )
             if(procurarHobby[0].length < 1) {
                 const id = Math.random()
                 await connection.insert(
                     [{
                         id,
-                        nome: hobby.nome
+                        Hobby: hobby.Hobby
                     }]
                 ).into("Hobby")
 

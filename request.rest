@@ -25,14 +25,14 @@ POST http://localhost:3003/estudante
 Content-Type: application/json
 
 {
-    "nome": "Vini Junior",
-    "email": "malvadeza@gmail.com.br",
-    "data_nasc": "1991-03-15",
+    "nome": "Bruna Carvalho",
+    "email": "bruna@gmail.com.br",
+    "data_nasc": "1997-02-18",
     "turma_id": "0.9484926436624486"
 }
 
 ### // FILTRAR ESTUDANTE PELO NOME COMPLETO:
-GET http://localhost:3003/estudante/"Vini Junior"
+GET http://localhost:3003/estudante/"Jorge"
 
 ### // ALTERAR TURMA DE UM DETERMINADO ESTUDANTE:
 PUT http://localhost:3003/estudante/0.8097187227816469
@@ -48,9 +48,9 @@ POST http://localhost:3003/hobby
 Content-Type: application/json
 
 {
-    "estudante_id":"0.8097187227816469",
+    "estudante_id":"0.7512528043773141",
     "hobbies": [
-        {"nome": "ver tiktok"}
+        {"Hobby": "jogar volei"}
     ]
 }
 
