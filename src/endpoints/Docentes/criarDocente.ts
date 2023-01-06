@@ -8,6 +8,7 @@ export default async function criarDocente(
     try{
         const {nome, email, data_nasc} = req.body
         const turma = req.body.turma_id
+        const id = Math.random()
 
         if(!nome || !email || !data_nasc || !turma){
             throw new Error ("Insira todos os parâmetros necessários: Nome, email, data de nascimento e turma.")
@@ -25,7 +26,7 @@ export default async function criarDocente(
 
         await connection.insert(
             [{
-                id: Math.random(),
+                id,
                 nome: nome,
                 email: email,
                 data_nasc: data_nasc,
@@ -33,7 +34,7 @@ export default async function criarDocente(
             }]
         ).into("Docente")
 
-        res.status(201).send("Docente criado com sucesso! Próxima etapa: Inserir suas especialidades.")
+        res.status(201).send(`Docente criado com sucesso! Próxima etapa: Inserir suas especialidades, para isso salve seu id: ${id}`)
     }catch(error:any){
         console.log(error)
     }

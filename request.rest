@@ -3,7 +3,7 @@ POST http://localhost:3003/turma
 Content-Type: application/json
 
 {
-    "nome": "MySQL"
+    "nome": "Phyton"
 }
 
 ### // LISTAR TURMAS:
@@ -62,10 +62,10 @@ POST http://localhost:3003/docente
 Content-Type: application/json
 
 {
-    "nome": "Joelma",
-    "email": "joelma@professor.com.br",
-    "data_nasc": "1997-04-11",
-    "turma_id": "0.9484926436624486"
+    "nome": "Hebe",
+    "email": "hebe@professor.com.br",
+    "data_nasc": "1957-02-10",
+    "turma_id": "0.27275071045677013"
 }
 
 ### /// INSERIR ESPECIALIDADE:W
@@ -73,9 +73,9 @@ POST http://localhost:3003/especialidade
 Content-Type: application/json
 
 {
-    "docente_id":"0.7946255538959066",
+    "docente_id":"0.7788297860724316",
     "especialidades": [
-        {"especialidade": "JavaScript"}
+        {"especialidade": "Phyton"}
     ]
 }
 
