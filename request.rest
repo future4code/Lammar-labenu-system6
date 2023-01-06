@@ -38,7 +38,7 @@ Content-Type: application/json
 {
     "estudante_id":"0.7512528043773141",
     "hobbies": [
-        {"Hobby": "escutar musica"}
+        {"Hobby": "Desenhar"}
     ]
 }
 

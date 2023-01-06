@@ -11,6 +11,23 @@ export default async function hobbyEstudante(
         const hobbies = req.body.hobbies
         const estudante_id = req.body.estudante_id
 
+        if(!hobbies){
+            res.status(422).send("Inserir pelo menos 1 hobby")
+        }else if(!estudante_id){
+            res.status(411).send("Inserir o id do estudante")
+        }
+
+        let resultadoTurma = await connection.raw( 
+            `SELECT Nome FROM Estudante where id=${estudante_id}`
+        )
+        
+        let tamanhoResultado = resultadoTurma[0].length      
+
+        if(tamanhoResultado < 1){
+            return res.status(422).send("Estudante não encontrado")
+        }
+
+
         for(let hobby of hobbies) {
             const procurarHobby = await connection.raw(
                 `SELECT id FROM Hobby WHERE Hobby = "${hobby.Hobby}"`
