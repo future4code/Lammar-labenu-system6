@@ -36,15 +36,14 @@ app.put("/turma/:id", alterarModulo)
 // Criar estudante:
 app.post("/estudante", criarEstudante)
 
+// Inserir o hobby de um determinado estudante:
+app.post("/hobby", hobbyEstudante)
+
 //Procurar estudante
 app.get("/estudante/:nome", listarEstudante)
 
 // Alterar turma de uma determinado estudante:
 app.put("/estudante/:id", alterarTurmaEstudante)
-
-// INSERIR HOBBY
-// Inserir o hobby de um determinado estudante:
-app.post("/hobby", hobbyEstudante)
 
 
 // ---------------> DOCENTE <--------------------
