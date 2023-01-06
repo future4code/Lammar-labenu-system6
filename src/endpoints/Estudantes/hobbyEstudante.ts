@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { request } from "http";
 import { connection } from "../../data/connection";
 
 export default async function hobbyEstudante(
@@ -6,33 +7,40 @@ export default async function hobbyEstudante(
     res: Response
 ){
     try{
-        const hobby_id = req.body.hobby_id
+        // CRIAR UM HOOBY
+        const hobbies = req.body.hobbies
         const estudante_id = req.body.estudante_id
 
-        if(!hobby_id ){
-            throw new Error ("Insira o id do hobby")
-        }else if(!estudante_id){
-            throw new Error ("Insira o id do estudante")
+        for(let hobby of hobbies) {
+            const procurarHobby = await connection.raw(
+                `SELECT id FROM Hobby WHERE nome = "${hobby.nome}"`
+            )
+            if(procurarHobby[0].length < 1) {
+                const id = Math.random()
+                await connection.insert(
+                    [{
+                        id,
+                        nome: hobby.nome
+                    }]
+                ).into("Hobby")
+
+                await connection.insert(
+                    [{
+                        estudante_id,
+                        hobby_id: id,
+                        id: Math.random(),
+                    }]
+                ).into("Estudante_hobby")
+            } else {
+                await connection.insert(
+                    [{
+                        estudante_id,
+                        hobby_id: procurarHobby[0][0].id,
+                        id: Math.random(),
+                    }]
+                ).into("Estudante_hobby")
+            }
         }
-
-        let resultadoTurma = await connection.raw( 
-            `SELECT Nome FROM Estudante where id=${estudante_id}`
-        )
-
-        
-        let tamanhoResultado = resultadoTurma[0].length      
-
-        if(tamanhoResultado < 1){
-            return res.status(422).send("Estudante não encontrado")
-        }
-
-        await connection.insert(
-            [{
-                id: Math.random(),
-                hobby_id,
-                estudante_id
-            }]
-        ).into("Estudante_hobby")
 
         res.status(201).send("Hobby inserido com sucesso!")
         console.log("Hobby inserido com sucesso!")

@@ -3,7 +3,7 @@ POST http://localhost:3003/turma
 Content-Type: application/json
 
 {
-    "nome": "C#"
+    "nome": "Node.js"
 }
 
 ### // LISTAR TURMAS:
@@ -11,7 +11,7 @@ GET http://localhost:3003/turma
 
 
 ### // ALTERAR MÓDULO DA TURMA:
-PUT http://localhost:3003/turma/0.6835537008247001
+PUT http://localhost:3003/turma/0.9484926436624486
 Content-Type: application/json
 
 {
@@ -28,18 +28,18 @@ Content-Type: application/json
     "nome": "Vini Junior",
     "email": "malvadeza@gmail.com.br",
     "data_nasc": "1991-03-15",
-    "turma_id": "0.23113908740604372"
+    "turma_id": "0.9484926436624486"
 }
 
 ### // FILTRAR ESTUDANTE PELO NOME COMPLETO:
-GET http://localhost:3003/estudante/"Ana"
+GET http://localhost:3003/estudante/"Vini Junior"
 
-### // ALTERAR TURMA DE UM ESTUDANTE:
-PUT http://localhost:3003/estudante/0.39859948773158704
+### // ALTERAR TURMA DE UM DETERMINADO ESTUDANTE:
+PUT http://localhost:3003/estudante/0.8097187227816469
 Content-Type: application/json
 
 {
-    "turma_id": "0.23113908740604372"
+    "turma_id": "0.9484926436624486"
 }
 
 
@@ -48,8 +48,10 @@ POST http://localhost:3003/hobby
 Content-Type: application/json
 
 {
-    "estudante_id":"0.20106397913381868",
-    "hobby_id":"2"
+    "estudante_id":"0.8097187227816469",
+    "hobbies": [
+        {"nome": "ver tiktok"}
+    ]
 }
 
 

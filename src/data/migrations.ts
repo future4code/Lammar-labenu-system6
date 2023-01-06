@@ -6,14 +6,11 @@ const erroMensagem = (error:any) => {console.log(error.message ||  error.sqlMess
 const createTables = async () => connection
     .raw(
         `
-        DROP TABLE IF EXISTS Turma, Estudante, Docente, Hobby, Estudante_hobby, Especialidade, Docente_Especialidade;
-
         CREATE TABLE IF NOT EXISTS Turma(
             id VARCHAR(255) PRIMARY KEY,
             nome VARCHAR(255),
             modulo VARCHAR(255) DEFAULT 0
         );
-
 
         CREATE TABLE IF NOT EXISTS Estudante (
             id VARCHAR(255) PRIMARY KEY,
@@ -32,10 +29,10 @@ const createTables = async () => connection
             turma_id VARCHAR(255) NOT NULL,
             FOREIGN KEY (turma_id) REFERENCES Turma(id)
         );
-        
+
         CREATE TABLE IF NOT EXISTS Hobby(
             id VARCHAR(255) PRIMARY KEY,
-            nome VARCHAR(255) NOT NULL UNIQUE
+            Hobby VARCHAR(255) NOT NULL UNIQUE
         ); 
 
         CREATE TABLE IF NOT EXISTS Estudante_hobby(
