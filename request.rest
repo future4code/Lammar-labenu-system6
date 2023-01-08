@@ -65,10 +65,10 @@ POST http://localhost:3003/docente
 Content-Type: application/json
 
 {
-    "nome": "Hebe",
-    "email": "hebe@professor.com.br",
-    "data_nasc": "1957-02-10",
-    "turma_id": "0.27275071045677013"
+    "nome": "Charles Xavier",
+    "email": "profxavier@professor.com.br",
+    "data_nasc": "1942-01-16",
+    "turma_id": "0.04578535576982756"
 }
 
 ### /// INSERIR ESPECIALIDADE:W
@@ -76,9 +76,16 @@ POST http://localhost:3003/especialidade
 Content-Type: application/json
 
 {
-    "docente_id":"0.7788297860724316",
+    "docente_id":"0.4845067643502241",
     "especialidades": [
-        {"especialidade": "Phyton"}
+        {"especialidade": "CSS"},
+        {"especialidade": "JavaScript"},
+        {"especialidade": "React"}
+        {"especialidade": "TypeScript"}
+        {"especialidade": "POO"}
+
+
+
     ]
 }
 
