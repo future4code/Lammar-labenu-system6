@@ -43,7 +43,7 @@ Content-Type: application/json
 }
 
 ### // FILTRAR ESTUDANTE PELO NOME COMPLETO:
-GET http://localhost:3003/estudante/"Flavinho"
+GET http://localhost:3003/estudante/"Joana"
 
 ### // ALTERAR TURMA DE UM DETERMINADO ESTUDANTE:
 PUT http://localhost:3003/estudante/0.30619681600427895
@@ -54,7 +54,7 @@ Content-Type: application/json
 }
 
 ### // FILTRAR ESTUDANTES QUE TENHAM O MESMO HOBBY:
-GET http://localhost:3003/estudante/hobby/"jogar futebol"
+GET http://localhost:3003/estudante/hobby/"ver tiktok"
 
 
 
