@@ -13,6 +13,7 @@ import alterarTurmaDocente from "./endpoints/Docentes/alterarTurmaDocente"
 import hobbyEstudante from "./endpoints/Estudantes/hobbyEstudante"
 import especialidadeDocente from "./endpoints/Docentes/especialidade"
 import listarEstudantePorHobby from "./endpoints/Estudantes/listarEstudanteHobby"
+import listarDocentePOO from "./endpoints/Docentes/listarDocentesPOO"
 
 const app = express()
 
@@ -63,6 +64,9 @@ app.get("/docente", listarDocentes)
 
 // Alterar turma de um determinado docente:
 app.put("/docente/:id", alterarTurmaDocente)
+
+//Procurar docentes especializados em POO
+app.get("/docente/poo", listarDocentePOO)
 
 
 

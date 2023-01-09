@@ -76,16 +76,9 @@ POST http://localhost:3003/especialidade
 Content-Type: application/json
 
 {
-    "docente_id":"0.4845067643502241",
+    "docente_id":"0.7788297860724316",
     "especialidades": [
-        {"especialidade": "CSS"},
-        {"especialidade": "JavaScript"},
-        {"especialidade": "React"}
-        {"especialidade": "TypeScript"}
         {"especialidade": "POO"}
-
-
-
     ]
 }
 
@@ -99,6 +92,9 @@ Content-Type: application/json
 {
     "turma_id":"0.23113908740604372"
 }
+
+### // FILTRAR LISTA DE DOCENTES ESPECIALISTAS EM POO:
+GET http://localhost:3003/docente/poo
 
 
 
