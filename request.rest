@@ -43,10 +43,10 @@ Content-Type: application/json
 }
 
 ### // FILTRAR ESTUDANTE PELO NOME COMPLETO:
-GET http://localhost:3003/estudante/"Anitta"
+GET http://localhost:3003/estudante/"Flavinho"
 
 ### // ALTERAR TURMA DE UM DETERMINADO ESTUDANTE:
-PUT http://localhost:3003/estudante/0.8097187227816469
+PUT http://localhost:3003/estudante/0.30619681600427895
 Content-Type: application/json
 
 {
@@ -86,11 +86,11 @@ Content-Type: application/json
 GET http://localhost:3003/docente
 
 ### // ALTERAR TURMA DE UM DOCENTE:
-PUT http://localhost:3003/docente/0.910779734382184
+PUT http://localhost:3003/docente/0.7788297860724316
 Content-Type: application/json
 
 {
-    "turma_id":"0.23113908740604372"
+    "turma_id":"0.9484926436624486"
 }
 
 ### // FILTRAR LISTA DE DOCENTES ESPECIALISTAS EM POO:
