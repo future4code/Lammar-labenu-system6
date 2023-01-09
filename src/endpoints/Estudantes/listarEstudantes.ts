@@ -7,7 +7,7 @@ export default async function listarEstudante(req:Request, res:Response) {
         const nome = req.params.nome
 
         let resultado = await connection.raw( 
-            `SELECT e.nome, e.email, e.data_nasc, e.turma_id, h.hobby from Estudante AS e inner join Estudante_hobby eh ON eh.estudante_id = e.id inner join Hobby h on h.id = eh.hobby_id WHERE e.nome=${nome}`
+            `SELECT e.id, e.nome, e.email, e.data_nasc, e.turma_id, h.hobby from Estudante AS e inner join Estudante_hobby eh ON eh.estudante_id = e.id inner join Hobby h on h.id = eh.hobby_id WHERE e.nome=${nome}`
         )
         
         let tamanhoResultado = resultado[0].length 
