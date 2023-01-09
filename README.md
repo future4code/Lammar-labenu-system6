@@ -48,3 +48,13 @@ Sistema básico para uma instituição de ensino.
     </p><li><strong>Alterar a turma.</strong></li>É necessário inserir o id do aluno e o id da turma.</p>
 </ul>
 
+## Tecnologias utilizadas:
+
+TypeScript, Node.js e MySQL
+
+## Documentação:
+https://documenter.getpostman.com/view/22350736/2s8Z75Spvr
+
+## Deploy:
+
+Não consegui realizar o deploy.
