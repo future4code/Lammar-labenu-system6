@@ -52,9 +52,6 @@ Sistema básico para uma instituição de ensino.
 
 TypeScript, Node.js e MySQL
 
-## Documentação:
-https://documenter.getpostman.com/view/22350736/2s8Z75Spvr
+## Documentação: https://documenter.getpostman.com/view/22350736/2s8Z75Spvr
 
-## Deploy:
-
-Não consegui realizar o deploy.
+## Deploy: https://labeny-system6.onrender.com/turma
