@@ -50,8 +50,7 @@ Sistema básico para uma instituição de ensino.
 
 ## Tecnologias utilizadas:
 
-TypeScript, Node.js e MySQL
+<p> TypeScript, Node.js e MySQL </p>
 
-## Documentação: https://documenter.getpostman.com/view/22350736/2s8Z75Spvr
-
-## Deploy: https://labeny-system6.onrender.com/turma
+### [Documentação](https://documenter.getpostman.com/view/22350736/2s8Z75Spvr)
+### [Deploy](https://labeny-system6.onrender.com/turma)
