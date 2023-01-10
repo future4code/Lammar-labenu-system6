@@ -61,3 +61,4 @@ const createTables = async () => connection
     .catch(erroMensagem)
     
     createTables()
+    
