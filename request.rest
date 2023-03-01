@@ -1,0 +1,101 @@
+/// CRIAR TURMA:
+POST http://localhost:3003/turma
+Content-Type: application/json
+
+{
+    "nome": "Azure"
+}
+
+### // LISTAR TURMAS:
+GET http://localhost:3003/turma
+
+
+### // ALTERAR MÓDULO DA TURMA:
+PUT http://localhost:3003/turma/0.9484926436624486
+Content-Type: application/json
+
+{
+    "modulo": 1
+}
+
+
+
+### // CRIAR ESTUDANTE:
+POST http://localhost:3003/estudante
+Content-Type: application/json
+
+{
+    "nome": "Flavinho",
+    "email": "dopneu@gmail.com.br",
+    "data_nasc": "1997-11-20",
+    "turma_id":"0.5064846596933097"
+}
+
+### /// INSERIR HOBBY:
+POST http://localhost:3003/hobby
+Content-Type: application/json
+
+{
+    "estudante_id":"0.30619681600427895",
+    "hobbies": [
+        {"Hobby": "jogar futebol"}
+    ]
+}
+
+### // FILTRAR ESTUDANTE PELO NOME COMPLETO:
+GET http://localhost:3003/estudante/"Joana"
+
+### // ALTERAR TURMA DE UM DETERMINADO ESTUDANTE:
+PUT http://localhost:3003/estudante/0.30619681600427895
+Content-Type: application/json
+
+{
+    "turma_id": "0.9484926436624486"
+}
+
+### // FILTRAR ESTUDANTES QUE TENHAM O MESMO HOBBY:
+GET http://localhost:3003/estudante/hobby/"ver tiktok"
+
+
+
+
+
+### // CRIAR DOCENTE:
+POST http://localhost:3003/docente
+Content-Type: application/json
+
+{
+    "nome": "Charles Xavier",
+    "email": "profxavier@professor.com.br",
+    "data_nasc": "1942-01-16",
+    "turma_id": "0.04578535576982756"
+}
+
+### /// INSERIR ESPECIALIDADE:W
+POST http://localhost:3003/especialidade
+Content-Type: application/json
+
+{
+    "docente_id":"0.7788297860724316",
+    "especialidades": [
+        {"especialidade": "POO"}
+    ]
+}
+
+### // FILTRAR LISTA DE DOCENTES:
+GET http://localhost:3003/docente
+
+### // ALTERAR TURMA DE UM DOCENTE:
+PUT http://localhost:3003/docente/0.7788297860724316
+Content-Type: application/json
+
+{
+    "turma_id":"0.9484926436624486"
+}
+
+### // FILTRAR LISTA DE DOCENTES ESPECIALISTAS EM POO:
+GET http://localhost:3003/docente/poo
+
+
+
+

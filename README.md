@@ -1,33 +1,56 @@
 ## LabenuSystem:
 
-Você estuda na Labenu_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização. 
+Sistema básico para uma instituição de ensino.
 
-Ele deve possuir, ao menos, as 3 entidades importantes:
+## Entidades
 
-1. Estudantes 
+<strong>1. Estudantes</strong> 
 
-    Representa estudantes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e os principais hobbies dele. 
+    Representa os estudantes da instituição.
+    Possuem: id, nome, email, data de nascimento e seus principais hobbies. 
 
-2. Docente
+<strong>2. Docente</strong> 
 
-    Representa docentes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e todas as especialidades dele. Há 7 especialidades: React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend
+    Representa os docentes da instituição.
+    Possuem: id, nome, email, data de nascimento e suas especialidades.
 
-3. Turma
+<strong>3. Turma</strong> 
 
-    Toda turma é composta das seguintes características: id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
+    Toda turma é composta das seguintes características: Id, nome e módulo.
+    
+    O módulo pode assumir os valores de 1 a 6 ou `undefined`, indicando que as aulas dessa turma ainda não começaram.
 
-    O módulo pode assumir os valores de 1 a 7 ou `undefined`, indicando que as aulas dessa turma ainda não começaram. Para esse exercício, vamos considerar que existam dois tipos de turma: integral ou noturna. Há uma restrição para o nome das turmas noturnas: tem que terminar com `-na-night`.
+## Funcionalidades
 
-As funcionalidades básicas são:
+<strong> Turma: </strong>
 
-→ Criar estudante;
+<ul>
+    <p><li><strong>Criar turma</strong></li></p>
+    <p><li><strong>Procurar turmas ativas:</strong></li> Turmas ativas tem módulo diferente de 0. </p>
+    <p><li><strong>Alterar módulo de uma determinada turma:</strong></li> Os valores aceitos são de 1 a 6.</p>
+</ul>
 
-→ Criar docente;
+<strong> Estudantes: </strong>
 
-→ Criar turma;
+<ul>
+    <p><li><strong>Criar estudante</strong></li></p>
+    <p><li><strong>Inserir os hobbies:</strong></li>O estudante pode inserir a quantidade de hobbies que desejar.</p>
+    <p><li><strong>Listar as informações de um estudante.</strong></li> A busca é realizada através do nome completo do estudante.</p>
+    <p><li><strong>Alterar a turma.</strong></li> É necessário inserir o id do aluno e o id da turma.</p>
+</ul>
 
-→ Adicionar estudante na turma;
+<strong> Docente: </strong>
 
-→ Adicionar docente na turma;
+<ul>
+    </p><li><strong>Criar docente</strong></li></p>
+    <p><li><strong>Inserir as especialidades: </strong></li> O docente pode inserir a quantidade de especialidades que desejar.</p>
+    </p><li><strong>Lista com todos os docentes</strong></li></p>
+    </p><li><strong>Alterar a turma.</strong></li>É necessário inserir o id do aluno e o id da turma.</p>
+</ul>
 
-→ Pegar a idade de algum estudante a partir do id
+## Tecnologias utilizadas:
+
+<p> TypeScript, Node.js e MySQL </p>
+
+### [Documentação](https://documenter.getpostman.com/view/22350736/2s8Z75Spvr)
+### [Deploy](https://labeny-system6.onrender.com/turma)
